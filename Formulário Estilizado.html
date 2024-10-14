@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>Formulário estilizado</title>
+    <style>
+        body {
+            font-family: Verdana;
+            background-color: white;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: black;
+            color: whitesmoke;
+            padding: 20px;
+            text-align: center;
+        }
+        main {
+            margin: 20px auto;
+            width: 80%;
+            background-color: whitesmoke;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        fieldset {
+            border: 2px solid black;
+            border-radius: 5px;
+            padding: 20px;
+            width: 50%;
+            margin: 0 auto;
+        }
+        legend {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: black;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="date"],
+        input[type="range"],
+        select {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="range"] {
+            width: calc(100% - 40px);
+        }
+
+        input[type="radio"] {
+            margin-right: 20px;
+            font-weight: normal;
+            color: #333
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 10px 20px;
+            background-color: black;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: green;
+        }
+
+        input[type="reset"]:hover {
+            background-color: red;
+        }
+
+        form {
+            max-width: 600px;
+            margin: auto;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: black;
+            color: white;
+            margin-top: 20px;
+        }
+
+        .botoes {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Formulário Estilizado</h1>
+    </header>
+    <main>
+        <section>
+            <form method="get">
+                <fieldset style="width: 50%;">
+                    <legend>Dados Cadastrais</legend>
+                        <p>
+                            <label for="iname">Nome:</label>
+                            <input type="text" name="name" id="iname" required>
+                        </p>
+                        <p>
+                            <label for="isname">Sobrenome:</label>
+                            <input type="text" name="sname" id="isname" required>
+                        </p>
+                        <p>
+                            <label for="igen">Sexo:</label>
+                            <select name="gen" id="igen">
+                                <option value="mas">Masculino</option>
+                                <option value="fem">Feminino</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label for="icpf">CPF:</label>
+                            <input type="text" name="cpf" id="icpf" required>
+                        </p>
+                        <p>
+                            <label for="iemail">Email:</label>
+                            <input type="email" name="email" id="iemail" required>
+                        </p>
+                        <p>
+                            <label for="icel">Celular:</label>
+                            <input type="text" name="cel" id="icel">
+                        </p>
+                        <p>
+                            <label for="idate">Data de nascimento:</label>
+                            <input type="date" name="date" id="idate" required>
+                        </p>
+                </fieldset><br>
+                <fieldset style="width: 50%;">
+                    <legend>Endereço de Entrega</legend>
+                        <p>
+                            <label for="icep">CEP:</label>
+                            <input type="text" name="cep" id="icep" required>
+                        </p>
+                        <p>
+                            <label for="irua">Rua:</label>
+                            <input type="text" name="rua" id="irua" required>
+                        </p>
+                        <p>
+                            <label for="icid">Cidade:</label>
+                            <input type="text" name="cid" id="icid" required>
+                        </p>
+                        <p>
+                            <label for="iseluf">Estado:</label>
+                            <select name="seluf" id="iseluf">
+                                <option value="SP">SP</option>
+                                <option value="RJ">RJ</option>
+                                <option value="MG">MG</option>
+                                <option value="ES">ES</option>
+                            </select>
+                        </p>
+                    </fieldset>
+                    <br>
+                    <div class="botoes">
+                        <input name="limpar" type="reset" value="Limpar"¨>&nbsp;
+                      <input name="submit" type="submit" value="Enviar">
+                    </div>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Marcos Paulo Calera</p>
+    </footer>
+</body>
+</html>
