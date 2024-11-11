@@ -1,0 +1,97 @@
+body {
+    font-family: verdana;
+    background-color: black;
+}
+
+.container {
+    display: grid;
+    gap: 10px;
+    padding: 20px;
+    height: 100vh;
+}
+
+.header {
+    background-color: red;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.menu {
+    background-color: grey;
+    color: white;
+    padding: 20px;
+}
+
+.aside {
+    background-color: rebeccapurple;
+    color: white;
+    padding: 20px;
+}
+
+.content {
+    background-color: whitesmoke;
+    color: black;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer {
+    background-color: red;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* pc */
+@media (min-width: 1025px) {
+    .container {
+        grid-template-areas: 
+            "header header header"
+            "menu content aside"
+            "footer footer footer";
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: auto 1fr auto;
+    }
+    .header { grid-area: header; }
+    .menu { grid-area: menu; }
+    .aside { grid-area: aside; }
+    .content { grid-area: content; }
+    .footer { grid-area: footer; }
+}
+
+/* tablet */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .container {
+        grid-template-areas: 
+            "header header"
+            "menu content"
+            "menu aside"
+            "footer footer";
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: auto 1fr auto;
+    }
+    .header { grid-area: header; }
+    .menu { grid-area: menu; }
+    .aside { grid-area: aside; }
+    .content { grid-area: content; }
+    .footer { grid-area: footer; }
+}
+
+/* celular  */
+@media (max-width: 600px) {
+    .container {
+        grid-template-areas: 
+            "header"
+            "menu"
+            "content"
+            "footer";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr auto;
+    }
+    .header { grid-area: header; }
+    .menu { grid-area: menu; }
+    .content { grid-area: content; }
+    .footer { grid-area: footer; }
+    .aside { display: none; }
+}
